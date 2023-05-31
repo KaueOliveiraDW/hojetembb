@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuzinho hoje?</title>
+   <link rel="stylesheet" href="cuzinho-css.css">
+</head>
+
+<body>
+  <div id="container">
+    <h2>Ola meu amor, que tal responder essa humilde pergunta ?</h2>
+    <div id="texto">
+      <p>Cuzinho hoje ??😏</p>
+    </div>
+    <div>
+      <div id="botao-movel" class="botao" onmouseover="moverBotao()">
+        <span>Não</span>
+      </div>
+      <div id="botao-estatico" class="botao">
+        <a href="https://www.youtube.com/watch?v=Fs0wds5bfAY"> <i>SIm</i> </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var botaoMovel = document.getElementById("botao-movel");
+
+    function moverBotao() {
+      var alturaMaxima = 768 - botaoMovel.offsetHeight;
+      var larguraMaxima = 1024 - botaoMovel.offsetWidth;
+      var novoTopo = Math.random() * alturaMaxima;
+      var novoLeft = Math.random() * larguraMaxima;
+      
+      botaoMovel.style.top = novoTopo + "px";
+      botaoMovel.style.left = novoLeft + "px";
+    }
+  </script>
+</body>
+</html>
